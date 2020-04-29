@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Custom' ">
+    <StartAction>Project</StartAction>
+    <ExternalConsole>true</ExternalConsole>
+    <LaunchUrl>http://localhost:5002</LaunchUrl>
+    <ApplicationURL>http://localhost:5002</ApplicationURL>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Helper\" />
+    <Folder Include="Models\" />
+    <Folder Include="Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.8.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="**/*" />
+  </ItemGroup>
+</Project>
